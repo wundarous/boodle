@@ -2,7 +2,9 @@ class Boodle < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
-  attr_accessor :title
 
+  def to_s
+    title
+  end
 
 end

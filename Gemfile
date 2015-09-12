@@ -30,7 +30,7 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-gem 'rename'
+gem 'emoji_data'
 
 
 # Use ActiveModel has_secure_password

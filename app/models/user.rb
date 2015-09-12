@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-
   def self.create_with_password(email)
     password_length = 8
     password = Devise.friendly_token.first(password_length)
@@ -16,8 +15,8 @@ class User < ActiveRecord::Base
   def self.fake
     user = create_with_password("#{Devise.friendly_token.first(6)}@test.com")
     Boodle.create(user: user, title: Devise.friendly_token.first(6))
-    Comment.create(boodle: Boodle.first, text: "sending you love")
-    Comment.create(boodle: Boodle.first, text: "hahaha")
+    Comment.create!(boodle: Boodle.first, :message => "sending you love")
+    Comment.create!(boodle: Boodle.first, :message => "hahaha")
   end
 
 end
