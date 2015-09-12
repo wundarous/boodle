@@ -1,0 +1,23 @@
+<%= form_for(@boodle) do |f| %>
+  <% if @boodle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boodle.errors.count, "error") %> prohibited this boodle from being saved:</h2>
+
+      <ul>
+      <% @boodle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <%= f.label :title %> <br />
+  <%= f.text_field :title %> <br />
+  
+  <%= f.label :data_url %> <br />
+  <%= f.text_field :data_url %><br />
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
