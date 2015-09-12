@@ -1,10 +1,10 @@
 class User < ActiveRecord::Base
   has_many :boodles
+  has_many :selfies
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
 
   def self.create_with_password(email)
     password_length = 8
