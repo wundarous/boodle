@@ -26,3 +26,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+# Credits
+
+Background image from https://unsplash.com/ohsaputra under https://unsplash.com/license (http://creativecommons.org/publicdomain/zero/1.0/)
