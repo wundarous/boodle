@@ -2,26 +2,13 @@
 
 <h1>Listing Boodles</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= link_to 'New Boodle', new_boodle_path %> <br />
 
-  <tbody>
-    <% @boodles.each do |boodle| %>  
-      <tr>
-        <td><%= boodle.title %></td>
-        <td><img src="<%= boodle.data_url %>" /></td>
-        <td><%= link_to 'Show', boodle %></td>
-        <td><%= link_to 'Edit', edit_boodle_path(boodle) %></td>
-        <td><%= link_to 'Destroy', boodle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Boodle', new_boodle_path %>
+<% @boodles.each do |boodle| %> 
+  <div class='boodle preview'>
+    <a href="<%= url_for(boodle) %>">
+      <img src="<%= boodle.data_url %>" />
+      <div class='actions'><%= boodle.title %></div>
+    </a>
+  </div>
+<% end %>
