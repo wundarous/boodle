@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Boodle</title>
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <title>Boodle</title>  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -12,11 +11,8 @@
 
 <div class="container">
 
-  <div class="row">
-    <div class="twelve columns"><%= yield %></div>
-  </div>
-</div>
-
+  <h1>Boodle Yourself</h1>
+  <%= yield %>
 
 </body>
 </html>

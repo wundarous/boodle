@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require ./jquery/plugins/jquery.ready_for
+//= require_tree ./controllers
