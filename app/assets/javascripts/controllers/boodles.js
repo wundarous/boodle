@@ -4,7 +4,7 @@
 $(document).ready_for_selector("#boodles-controller.new-action", function() {
   "use strict";
   
-  $( "form.new_boodle" ).submit(function( event ) {
+  $("form.new_boodle").submit(function( event ) {
     $(this).find('#boodle_data_url').val($('#boodle-canvas')[0].toDataURL('image/png'));
   });
   
