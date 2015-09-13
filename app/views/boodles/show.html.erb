@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<h3>Inspirations</h3>
+<h3>Comments</h3>
 
 <%= form_for(Comment.new(:boodle_id => @boodle.id)) do |f| %>
   <%= hidden_field(:comment, :boodle_id, :value => @boodle.id) %>
@@ -23,7 +23,7 @@
       <%= f.text_field :message %>
     </div>
     <div class="three columns right">
-      <%= f.submit "Inspire", :class => "button-primary" %>
+      <%= f.submit "Add", :class => "button-primary" %>
     </div>
   </div>
 

@@ -3,7 +3,11 @@ class Boodle < ActiveRecord::Base
   has_many :comments
 
   def emojis
-    comments.collect { |comment| comment.counts_by_emoji.values }.flatten
+    result = []
+    comments.each do |comment|
+      result.concat(comment.counts_by_emoji.keys)
+    end
+    result.join('')
   end
 
   def to_s

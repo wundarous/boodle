@@ -2,12 +2,15 @@
     <div class='boodle preview'>
       <a href="<%= url_for(boodle) %>">
         <div class='info'>
-          <%= boodle.user.user_type.emoji %>
+          <%= boodle.user.user_type.emoji unless boodle.user.user_type.nil? %>
           <%= boodle.title %>
         </div>
         <img src="<%= boodle.data_url %>" />
         <div class='info'>
           <%= boodle.emojis %>
+          <% if boodle.emojis.blank? %>
+          new
+          <% end %>
         </div>
       </a>
     </div>
