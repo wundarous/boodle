@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
     count = user.boodles.count
     story_parts = StoryPart.all
     story_part = count < story_parts.length - 1 ? story_parts[count] : StoryPart.new
-    Boodle.new(user: user, title: story_part.category, description: story_part.description)
+    Boodle.new(user: user, title: story_part.description)
   end
 
 end
