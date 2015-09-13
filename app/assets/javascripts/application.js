@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require ./jquery/plugins/jquery.ready_for
 //= require ./jquery/plugins/jquery.sketch
+//= require_tree ./features
 //= require_tree ./controllers

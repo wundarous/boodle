@@ -16,9 +16,10 @@
     <%= render 'boodle_container' %>
 
     <%= f.label :note %>
-    <%= f.text_field :note %>
+    <%= f.text_area :note %>
+    <%= hidden_field(:boodle, :data_url) %>
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit :class => "button-primary" %>
     </div>
 <% end %>
