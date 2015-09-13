@@ -6,8 +6,8 @@ class Comment < ActiveRecord::Base
     emojis = EmojiData.scan(message)
     result=Hash.new
     emojis.each do |emoji|
-      result[emoji.name] ||= 0
-      result[emoji.name] += 1
+      result[emoji] ||= 0
+      result[emoji] += 1
     end
     result
   end

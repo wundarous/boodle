@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :boodles
   has_many :selfies
+  belongs_to :user_type
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -17,6 +19,13 @@ class User < ActiveRecord::Base
     Boodle.create(user: user, title: Devise.friendly_token.first(6))
     Comment.create!(boodle: Boodle.first, :message => "sending you love")
     Comment.create!(boodle: Boodle.first, :message => "hahaha")
+  end
+
+  def self.next_boodle(user)
+    count = user.boodles.count
+    story_parts = StoryPart.all
+    story_part = count < story_parts.length - 1 ? story_parts[count] : StoryPart.new
+    Boodle.new(user: user, title: story_part.category, description: story_part.description)
   end
 
 end

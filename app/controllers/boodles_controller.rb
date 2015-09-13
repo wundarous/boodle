@@ -1,6 +1,8 @@
 class BoodlesController < ApplicationController
   before_action :set_boodle, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_user!, :except => [:index, :show]
+
   # GET /boodles
   # GET /boodles.json
   def index
@@ -12,9 +14,10 @@ class BoodlesController < ApplicationController
   def show
   end
 
+
   # GET /boodles/new
   def new
-    @boodle = Boodle.new
+    @boodle = User.next_boodle(current_user)
   end
 
   # GET /boodles/1/edit

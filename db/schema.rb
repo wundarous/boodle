@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150912213644) do
+ActiveRecord::Schema.define(version: 20150912234747) do
 
   create_table "boodles", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id",     null: false
     t.text     "data_url"
+    t.string   "note"
+    t.string   "description"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -35,6 +37,20 @@ ActiveRecord::Schema.define(version: 20150912213644) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "story_parts", force: :cascade do |t|
+    t.string   "category"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "user_types", force: :cascade do |t|
+    t.string   "emoji"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -48,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150912213644) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "user_type_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

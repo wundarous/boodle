@@ -12,11 +12,10 @@
   <tbody>
     <% @boodles.each do |boodle| %>  
       <tr>
-        <td><%= boodle.title %></td>
-        <td><img src="<%= boodle.data_url %>" /></td>
-        <td><%= link_to 'Show', boodle %></td>
-        <td><%= link_to 'Edit', edit_boodle_path(boodle) %></td>
-        <td><%= link_to 'Destroy', boodle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= boodle.user.user_type.emoji %></td>
+        <td><%= boodle.emojis %></td>
+        <td><%= boodle.description %></td>
+        <td><%= link_to boodle.note, url_for(boodle) %></td>
       </tr>
     <% end %>
   </tbody>
