@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <div class='boodle'>
+  <div class="info">
+    <%= @boodle.title %>
+  </div>
   <img src="<%= @boodle.data_url %>"/>
 
   <div class='info'>
-    <%= @boodle.title %> <br/>
     <% if @boodle.user == current_user %>
         <%= link_to '⛔️', @boodle, method: :delete, data: {confirm: 'Are you sure?'} %> |
     <% end %>

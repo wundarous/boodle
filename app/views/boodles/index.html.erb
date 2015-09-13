@@ -4,10 +4,12 @@
 <% @boodles.each do |boodle| %>
     <div class='boodle preview'>
       <a href="<%= url_for(boodle) %>">
-        <img src="<%= boodle.data_url %>" />
         <div class='info'>
           <%= boodle.user.user_type.emoji %>
           <%= boodle.title %>
+        </div>
+        <img src="<%= boodle.data_url %>" />
+        <div class='info'>
           <%= boodle.emojis %>
         </div>
       </a>
