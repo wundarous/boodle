@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Boodle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,22 +9,16 @@
 </head>
 <body id="<%= controller_name -%>-controller" class="<%= action_name -%>-action">
 
-<div class="container">
-
-  <h1>Boodle</h1>
-
-  <div class="login">
-    <% if user_signed_in? %>
-        <li>
-          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-        </li>
-    <% else %>
-        <li>
-          <%= link_to('Login', new_user_session_path) %>
-        </li>
-    <% end %>
+<header>
+  <div class="container">
+    <%= link_to 'Boodle', '/', :class => "left" %>
+    <%= link_to 'Create', new_boodle_path, :class => "right" %>
   </div>
+</header>
+
+<div class="container">
   <%= yield %>
 </div>
+
 </body>
 </html>
