@@ -22,10 +22,11 @@ class User < ActiveRecord::Base
   end
 
   def self.next_boodle(user)
-    count = user.boodles.count
-    story_parts = StoryPart.all
-    story_part = count < story_parts.length - 1 ? story_parts[count] : StoryPart.new
-    Boodle.new(user: user, title: story_part.description)
+    StoryPart.all.each do |story_part|
+      return Boodle.new(user: user, title: story_part.description) unless Boodle.where(user_id: user.id, title: story_part.description).any?
+    end
+
+    Boodle.new(user: user, title: "")
   end
 
 end
