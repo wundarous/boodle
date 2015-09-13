@@ -6,4 +6,7 @@ class MainController < ApplicationController
   def stylishness
   end
   
+  def options
+  end
+  
 end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :boodles
   resources :comments
 
+  get '/options' => 'main#options'
   get '/stylishness' => 'main#stylishness'
   root 'main#index'
 
