@@ -1,3 +1,20 @@
 #main-controller.stylishness-action {
-  .heading { text-decoration: underline; }
+  .heading { text-decoration: underline; }  
+}
+
+#main-controller.index-action {
+  
+  .quote {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    margin-left: 10%;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    padding: 1rem;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .top { margin-top: 20%; }
 }
