@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @boodle.title %></h2>
-<img src="<%= @boodle.data_url %>" />
+<div class='boodle'>
+  <img src="<%= @boodle.data_url %>" />
+  <div class='actions'>
+    <%= @boodle.title %> <br />
+    <%= link_to 'Destroy', @boodle, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'Edit', edit_boodle_path(@boodle) %> |
+    <%= link_to 'Back', boodles_path %>
+  </div>
+</div>
 
-<!--reach out if different user and they are a long term survivor-->
-<!--show comments-->
-<!--Add comments if different user-->
-
+\
