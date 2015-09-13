@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <div class='boodle'>
-  <img src="<%= @boodle.data_url %>" />
+  <img src="<%= @boodle.data_url %>"/>
+
   <div class='info'>
-    <%= @boodle.title %> <br />
-    <%= link_to 'Destroy', @boodle, method: :delete, data: { confirm: 'Are you sure?' } %> |
-    <%= link_to 'Edit', edit_boodle_path(@boodle) %> |
-    <%= link_to 'Back', boodles_path %>
+    <%= @boodle.title %> <br/>
+    <% if @boodle.user == current_user %>
+        <%= link_to '⛔️', @boodle, method: :delete, data: {confirm: 'Are you sure?'} %> |
+    <% end %>
+    <%= link_to '⏎', boodles_path %>
   </div>
 </div>
