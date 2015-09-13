@@ -55,7 +55,7 @@ end
 
 user_type_options = {
     name: "Happy and Healthy",
-    emoji: "😄"
+    emoji: ""
 }
 create_user_type(user_type_options)
 
@@ -71,7 +71,7 @@ create_user(user_options)
 
 user_type_options = {
     name: "Nervously Optimistic",
-    emoji: "😓"
+    emoji: ""
 }
 create_user_type(user_type_options)
 
@@ -88,7 +88,7 @@ create_user(user_options)
 
 user_type_options = {
     name: "Recently Diagnosed",
-    emoji: "😱"
+    emoji: ""
 }
 create_user_type(user_type_options)
 
@@ -103,7 +103,7 @@ create_user(user_options)
 # -------------------- Long Term Survivor --------------------
 user_type_options = {
     name: "Long-term Survivor",
-    emoji: "😇"
+    emoji: ""
 }
 create_user_type(user_type_options)
 
@@ -114,22 +114,6 @@ user_options = {
     :user_type_id => UserType.last.id
 }
 create_user(user_options)
-
-# -------------------- Boodle Comments --------------------
-
-comment_options = {
-  :boodle_id => Boodle.first.id,
-  :message => "Keep Calm and Carry On :)"
-}
-
-create_boodle_comment(comment_options)
-
-comment_options = {
-  :boodle_id => Boodle.first.id,
-  :message => "Stay Strong and Fight like the dickens!"
-}
-
-create_boodle_comment(comment_options)
 
 # -------------------- Story Types -------------------
 
@@ -200,3 +184,19 @@ boodle_options = {
 }
 
 create_boodle(boodle_options)
+
+# -------------------- Boodle Comments --------------------
+
+comment_options = {
+  :boodle_id => Boodle.first.id,
+  :message => "Keep Calm and Carry On :)"
+}
+
+create_boodle_comment(comment_options)
+
+comment_options = {
+  :boodle_id => Boodle.first.id,
+  :message => "Stay Strong and Fight like the dickens!"
+}
+
+create_boodle_comment(comment_options)
