@@ -2,7 +2,7 @@
 
 <div class='boodle'>
   <img src="<%= @boodle.data_url %>" />
-  <div class='actions'>
+  <div class='info'>
     <%= @boodle.title %> <br />
     <%= link_to 'Destroy', @boodle, method: :delete, data: { confirm: 'Are you sure?' } %> |
     <%= link_to 'Edit', edit_boodle_path(@boodle) %> |

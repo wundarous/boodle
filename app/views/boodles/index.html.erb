@@ -6,34 +6,13 @@
     <div class='boodle preview'>
       <a href="<%= url_for(boodle) %>">
         <img src="<%= boodle.data_url %>" />
-        <div class='actions'><%= boodle.title %></div>
+        <div class='info'>
+          <%= boodle.user.user_type.emoji %>
+          <%= boodle.title %>
+          <%= boodle.emojis %>
+        </div>
       </a>
     </div>
 <% end %>
-<%= link_to 'New Boodle', new_boodle_path %> <br />
-
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-  
-
-  <tbody>
-    <% @boodles.each do |boodle| %>  
-      <tr>
-        <td><%= boodle.user.user_type.emoji %></td>
-        <td><%= boodle.emojis %></td>
-        <td><%= boodle.description %></td>
-        <td><%= link_to boodle.note, url_for(boodle) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Boodle', new_boodle_path %>
