@@ -55,7 +55,7 @@ end
 
 user_type_options = {
     name: "Happy and Healthy",
-    emoji: "í ½í¸„"
+    emoji: "ðŸ˜„"
 }
 create_user_type(user_type_options)
 
@@ -71,7 +71,7 @@ create_user(user_options)
 
 user_type_options = {
     name: "Nervously Optimistic",
-    emoji: "í ½í¸“"
+    emoji: "ðŸ˜“"
 }
 create_user_type(user_type_options)
 
@@ -88,7 +88,7 @@ create_user(user_options)
 
 user_type_options = {
     name: "Recently Diagnosed",
-    emoji: "í ½í¸±"
+    emoji: "ðŸ˜±"
 }
 create_user_type(user_type_options)
 
@@ -103,7 +103,7 @@ create_user(user_options)
 # -------------------- Long Term Survivor --------------------
 user_type_options = {
     name: "Long-term Survivor",
-    emoji: "í ½í¸‡"
+    emoji: "ðŸ˜‡"
 }
 create_user_type(user_type_options)
 
