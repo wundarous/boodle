@@ -112,25 +112,25 @@ create_boodle(boodle_options)
 
 user_type_options = {
     name: "Happy and Healthy",
-    emoji: ""
+    emoji: "😄"
 }
 create_user_type(user_type_options)
 
 user_type_options = {
     name: "Nervously Optimistic",
-    emoji: ""
+    emoji: "😓"
 }
 create_user_type(user_type_options)
 
 user_type_options = {
     name: "Recently Diagnosed",
-    emoji: ""
+    emoji: "😱"
 }
 create_user_type(user_type_options)
 
 user_type_options = {
     name: "Long-term Survivor",
-    emoji: ""
+    emoji: "😇"
 }
 create_user_type(user_type_options)
 

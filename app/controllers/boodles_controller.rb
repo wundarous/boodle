@@ -28,7 +28,7 @@ class BoodlesController < ApplicationController
   # POST /boodles.json
   def create
     @boodle = Boodle.new(boodle_params)
-    @boodle.user = temp_user
+    @boodle.user = current_user
 
     respond_to do |format|
       if @boodle.save
