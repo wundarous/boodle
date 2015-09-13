@@ -11,12 +11,12 @@
         </div>
     <% end %>
 
-    <%= f.label @boodle.title %> <br/>
-    <%= f.label @boodle.description %> <br/>
+    <h2>Telling My Story: <%=@boodle.title%></h2>
 
     <%= render 'boodle_container' %>
 
-    <%= f.label :note %> <br />
+    <%= f.label :note %>
+    <%= f.text_field :note %>
 
     <div class="actions">
       <%= f.submit %>
