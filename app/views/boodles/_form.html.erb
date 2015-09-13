@@ -1,25 +1,18 @@
 <%= form_for(@boodle) do |f| %>
-    <% if @boodle.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@boodle.errors.count, "error") %> prohibited this boodle from being saved:</h2>
+  <% if @boodle.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@boodle.errors.count, "error") %> prohibited this boodle from being saved:</h2>
 
-          <ul>
-            <% @boodle.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+        <ul>
+          <% @boodle.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
 
-    <h2>Telling My Story: <%=@boodle.title%></h2>
-
-    <%= render 'boodle_container' %>
-
-    <%= f.label :note %>
-    <%= f.text_area :note %>
-    <%= hidden_field(:boodle, :data_url) %>
-
-    <div class="actions">
-      <%= f.submit :class => "button-primary" %>
-    </div>
+  <%= f.label :title, "Telling My Story:" %> <%= f.text_field :title %>
+  <%= render 'boodle_container' %>
+  <%= hidden_field(:boodle, :data_url) %>
+  <%= f.submit :class => "button-primary" %>
 <% end %>
