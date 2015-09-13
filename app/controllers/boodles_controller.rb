@@ -6,7 +6,7 @@ class BoodlesController < ApplicationController
   # GET /boodles
   # GET /boodles.json
   def index
-    @boodles = Boodle.all
+    @boodles = Boodle.order(created_at: :desc)
   end
 
   # GET /boodles/1
