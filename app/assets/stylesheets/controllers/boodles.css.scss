@@ -20,7 +20,9 @@
   
   div.preview {
     display: inline-block;
-    margin: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
     
     a {
       text-decoration: none;
@@ -31,7 +33,23 @@
   }
 }
 
-#boodles-controller form div.title {
+#boodles-controller.show-action {
   
- 
+  h3 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  li {
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    list-style: none;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+  }
+  
 }

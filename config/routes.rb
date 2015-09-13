@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   resources :boodles
+  resources :comments
 
   get '/stylishness' => 'main#stylishness'
   root 'main#index'

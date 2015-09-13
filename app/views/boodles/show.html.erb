@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class='boodle'>
   <div class="info">
     <%= @boodle.title %>
@@ -13,3 +11,26 @@
     <%= link_to '⏎', boodles_path %>
   </div>
 </div>
+
+<h3>Inspirations</h3>
+
+<%= form_for(Comment.new(:boodle_id => @boodle.id)) do |f| %>
+  <%= hidden_field(:comment, :boodle_id, :value => @boodle.id) %>
+  
+  <!-- columns should be the immediate child of a .row -->
+  <div class="row">
+    <div class="nine columns">
+      <%= f.text_field :message %>
+    </div>
+    <div class="three columns right">
+      <%= f.submit "Inspire", :class => "button-primary" %>
+    </div>
+  </div>
+
+<% end %>
+
+<ul>
+  <% @boodle.comments.each do |comment| %>
+    <li><%= comment.message -%></li>
+  <%- end -%>
+</ul>

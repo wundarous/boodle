@@ -24,6 +24,15 @@ def create_boodle(options)
   end
 end
 
+def create_boodle_comment(options)
+  if Comment.exists?(:message => options[:message])
+    puts "Ignoring - Comment already exists for: #{options[:message]}"
+  else
+    Comment.create!(options)
+    puts "Successfully created Comment: #{options[:message]}"
+  end
+end
+
 def create_user_type(options)
   if UserType.exists?(name: options[:name])
     puts "Ignoring - UserType already exists for: #{options[:name]}"
@@ -46,7 +55,7 @@ end
 
 user_type_options = {
     name: "Happy and Healthy",
-    emoji: "ðŸ˜„"
+    emoji: "í ½í¸„"
 }
 create_user_type(user_type_options)
 
@@ -62,7 +71,7 @@ create_user(user_options)
 
 user_type_options = {
     name: "Nervously Optimistic",
-    emoji: "ðŸ˜“"
+    emoji: "í ½í¸“"
 }
 create_user_type(user_type_options)
 
@@ -79,7 +88,7 @@ create_user(user_options)
 
 user_type_options = {
     name: "Recently Diagnosed",
-    emoji: "ðŸ˜±"
+    emoji: "í ½í¸±"
 }
 create_user_type(user_type_options)
 
@@ -94,7 +103,7 @@ create_user(user_options)
 # -------------------- Long Term Survivor --------------------
 user_type_options = {
     name: "Long-term Survivor",
-    emoji: "ðŸ˜‡"
+    emoji: "í ½í¸‡"
 }
 create_user_type(user_type_options)
 
@@ -106,6 +115,21 @@ user_options = {
 }
 create_user(user_options)
 
+# -------------------- Boodle Comments --------------------
+
+comment_options = {
+  :boodle_id => Boodle.first.id,
+  :message => "Keep Calm and Carry On :)"
+}
+
+create_boodle_comment(comment_options)
+
+comment_options = {
+  :boodle_id => Boodle.first.id,
+  :message => "Stay Strong and Fight like the dickens!"
+}
+
+create_boodle_comment(comment_options)
 
 # -------------------- Story Types -------------------
 
