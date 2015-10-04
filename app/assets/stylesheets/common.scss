@@ -1,6 +1,7 @@
+
 body {
   color: white;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'desyrelregular';
   height: 100vh;
 }
 
@@ -35,8 +36,11 @@ body {
   }
   
   a.cfff { background-color: #fff; }
-  a.c000 { background-color: #000; }
-  a.cf00 { background-color: #f00; }
-  a.c0f0 { background-color: #0f0; }
-  a.c00f { background-color: #00f; }
+  a.cea8bbc { background-color: $pink; }
+  a.cb7a2cf { background-color: $lavender; }
+  a.c49c5dc { background-color: $sky; }
+  a.c9ec081 { background-color: $forest; }
+  a.cfdc64a { background-color: $yellow; }
+  a.cff7b10 { background-color: $orange; }
+  a.cc6132a { background-color: $red; }
 }

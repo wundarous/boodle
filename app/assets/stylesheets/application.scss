@@ -1,7 +1,7 @@
 @import "./variables/**/*";
-@import "./fonts/include";
-@import "./skeleton-2.0.4/normalize.css.scss";
-@import "./skeleton-2.0.4/skeleton.css.scss";
+@import "fonts/include";
+@import "skeleton-2.0.4/normalize";
+@import "skeleton-2.0.4/skeleton";
 @import "layout";
 @import "common";
 @import "./features/**/*";

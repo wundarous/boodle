@@ -15,24 +15,31 @@ html {
   background-color: black;
 }
 
+
 header {
   background-color: rgba(0, 0, 0, 0.8);
   overflow: hidden;
-	width: 100%;
-	margin-bottom: 4rem;
-	
-  div.container { padding: 1rem; }
-  
+  width: 100%;
+  margin-bottom: 4rem;
+
+  div.container { padding: 0rem; }
+  div.logo { float: left; margin-top: 1rem;}
+  div.create { float: right; }
+
   a {
     text-decoration: none;
-    color: white;
+    color: $lavender;
     float: right;
     font-size: 3rem;
     margin: 0;
     padding: 0;
     line-height: 1.2;
   }
-  
-  a.left { float: left; }
-  a.right { float: right; }
+
+  img {
+    display: inline-block;
+    height: 3rem;
+  }
+
+  a.right { float: right; margin-top: 1rem; }
 }
