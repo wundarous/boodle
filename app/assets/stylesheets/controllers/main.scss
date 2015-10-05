@@ -11,19 +11,31 @@
 
   &.index-action {
     .main-image {
-      position: relative;
+      background-image: url(background.jpg);
 
-      > img {
-        width: 100%;
-      }
+      /* 
+        Make the background image fit the container, even when resized. 
+      */
+      background-size: contain;
+      background-repeat: no-repeat;
 
-      .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        top: 130px;
-        left: 0;
+      /*
+         Since we're using a background image, we need to 
+         force the height so it doesn't get clipped. 
+       */
+      height: 925px;
+
+      /*
+         Position container using percentage, so that it scales with 
+          the screen size.
+       */
+      .boobs-row {
+        position: relative;
+        top: 10%;
+
+        .boobs {
+          width: 100%;
+        }
       }
     }
 
@@ -32,9 +44,7 @@
       color: #000;
     }
     
-    .boobs {
-      width: 100%;
-    }
+
 
   }  
 }
