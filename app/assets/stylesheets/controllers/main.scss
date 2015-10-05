@@ -2,10 +2,39 @@
   .heading { text-decoration: underline; }  
 }
 
-#main-controller.index-action {
-  
-  .boobs {
-    width: 100%;
+#main-controller {
+  background-image: none;
+
+  header {
+    margin-bottom: 0;
   }
 
+  &.index-action {
+    .main-image {
+      position: relative;
+
+      > img {
+        width: 100%;
+      }
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        top: 130px;
+        left: 0;
+      }
+    }
+
+    .promo-row {
+      background: #fff;
+      color: #000;
+    }
+    
+    .boobs {
+      width: 100%;
+    }
+
+  }  
 }
