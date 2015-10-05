@@ -10,41 +10,14 @@
   }
 
   &.index-action {
-    .main-image {
-      background-image: url(background.jpg);
-
-      /* 
-        Make the background image fit the container, even when resized. 
-      */
-      background-size: contain;
-      background-repeat: no-repeat;
-
-      /*
-         Since we're using a background image, we need to 
-         force the height so it doesn't get clipped. 
-       */
-      height: 925px;
-
-      /*
-         Position container using percentage, so that it scales with 
-          the screen size.
-       */
-      .boobs-row {
-        position: relative;
-        top: 10%;
-
-        .boobs {
-          width: 100%;
-        }
-      }
+    .boobs-row img{
+      width: 100%;
     }
 
     .promo-row {
-      background: #fff;
-      color: #000;
+      background: $black;
+      color: $white;
     }
-    
-
 
   }  
 }
