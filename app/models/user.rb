@@ -22,11 +22,13 @@ class User < ActiveRecord::Base
   end
 
   def self.next_boodle(user)
-    StoryPart.all.each do |story_part|
-      return Boodle.new(user: user, title: story_part.description) unless Boodle.where(user_id: user.id, title: story_part.description).any?
+    if user.boodles.length == 0
+      title = 'My Breasts Are'
+    else
+      title = StoryPart.all[rand(StoryPart.all.length - 1)].description
     end
 
-    Boodle.new(user: user, title: "")
+    Boodle.new(user: user, title: title)
   end
 
 end
