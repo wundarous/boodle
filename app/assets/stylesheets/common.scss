@@ -1,4 +1,6 @@
 
+
+
 body {
   color: white;
   font-family: 'desyrelregular';
@@ -35,7 +37,8 @@ body {
     height: 2em;
   }
   
-  a.cfff { background-color: #fff; }
+  a.cfff { background-color: $white; }
+  a.c000 { background-color: $black; }
   a.cea8bbc { background-color: $pink; }
   a.cb7a2cf { background-color: $lavender; }
   a.c49c5dc { background-color: $sky; }

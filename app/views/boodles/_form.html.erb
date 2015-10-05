@@ -16,9 +16,18 @@
     <% else %>
         <%= f.text_field :title %>
     <% end %>
-    <%= render 'boodle_container' %>
-    <%= hidden_field(:boodle, :data_url) %>
-    <div class='create-boodle'>
-      <%= f.submit %>
+
+
+    <div class="tool-palatte">
+      <%= render 'boodle_color_selection' %>
+      <div class='create-boodle'>
     </div>
+      <%= f.submit :class => 'u-pull-right'%>
+    </div>
+    <canvas id="boodle-canvas">
+    </canvas>
+
+
+    <%= hidden_field(:boodle, :data_url) %>
+
 <% end %>
